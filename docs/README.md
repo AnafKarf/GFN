@@ -23,8 +23,10 @@ However, such molecules can be harder to test: you have to use living organisms 
 Thus, it is important to distinguish such molecules before testing them. One of the ways to do it is using Graph Feature Network.
 
 ## What is a Graph and why can we use it for molecules?
-![Example of a graph](/GFN/assets/graph.png)
-*Example of a graph*
+<p>
+    <img src="/GFN/assets/graph.png" alt>
+    <em>Example of a graph</em>
+</p>
 
 A graph is a structure that shows connection between set of objects. 
 
@@ -153,7 +155,7 @@ Here are all imports you will need to use:
 ```
 
 ### Load dataset
-In this example, we use our custom dataset collected from [ChEMBL](https://www.ebi.ac.uk/chembl/)[ChEMBL]. 
+In this example, we use our custom dataset collected from [ChEMBL](https://www.ebi.ac.uk/chembl/). 
 You can view the dataset [on Kaggle](https://www.kaggle.com/datasets/davidhachikov/biotherapeutic-property-dataset). 
 
 First, load the dataset you want to use:
@@ -168,7 +170,7 @@ In our case, the dataset is already divided into train and test parts.
 However, you may need to divide the dataset into train and test parts yourself, if you want to use another one. 
 
 Since in the dataset each molecule is represented in the SMILES format, we need to convert it to graph. 
-You can follow [this tutorial](https://www.blopig.com/blog/2022/02/how-to-turn-a-smiles-string-into-a-molecular-graph-for-pytorch-geometric/)[this tutorial] to know how to do it. 
+You can follow [this tutorial](https://www.blopig.com/blog/2022/02/how-to-turn-a-smiles-string-into-a-molecular-graph-for-pytorch-geometric/) to know how to do it. 
 However, for our convenience, we wrap the dataset into ```python SmilesDataset``` class. 
 It uses ```python create_pytorch_geometric_graph_data_list_from_smiles_and_labels``` function from the tutorial, and inherits from ```python Dataset``` class defined in ```python torch_geometric.data```
 
@@ -434,7 +436,7 @@ Here are the metrics we obtained on the test dataset.
 *Classification report*
 
 ## Code
-You can check the [Google Colab notebook](https://colab.research.google.com/drive/1HHyogoqQYtZH53v97Mf5fXzwk8I6X5w8?usp=sharing)[Google Colab notebook] with all the code for yourself.
+You can check the [Google Colab notebook](https://colab.research.google.com/drive/1HHyogoqQYtZH53v97Mf5fXzwk8I6X5w8?usp=sharing) with all the code for yourself.
 
 ### Finally
 So, this is how you can predict different molecular properties, such as biotherapeutic origin, using GFN! 
