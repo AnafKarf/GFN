@@ -37,15 +37,19 @@ A graph consists of two main parts:
 Both nodes and edges may have different types and features.
 
 The reason why we represent molecules as graphs is because they also consist of units (atoms) and connections between those units. 
-![Example of a molecule](/GFN/assets/molekula-glicina.jpg)
-*Example of a molecule*
+<figure align="center">
+    <img src="/GFN/assets/molekula-glicina.jpg" alt>
+    <figcaption>Example of a molecule</figcaption>
+</figure>
 
 ## What is a Graph Feature Network?
 Do you know what a Convolutional Neural Network is? 
 Well, Graph Feature Network is a modification of Graph Convolutional Network, which is similar to Convolutional Neural Network. 
 The purpose of GCN is to capture the features of graphs and create a similarity function in such a way that similar graphs are embedded close together. 
-![How graph embedding works](/GFN/assets/graph_embeddings.png)
-*Our goal, when creating networks on top of graphs*
+<figure align="center">
+    <img src="/GFN/assets/graph_embeddings.png" alt>
+    <figcaption>Our goal, when creating networks on top of graphs</figcaption>
+</figure>
 
 So, let's start from the beginning!
 
@@ -54,8 +58,10 @@ To compare the new solution (Graph Feature Network), it is first necessary to un
 Similar to Convolutional Neural Networks (CNN), GCN aim to capture both local and global information in order to perform node prediction tasks. 
 Additionally, if a node-level task can be solved, the graph-level task can easily be addressed by applying any aggregation function to the node embeddings, such as a Multi-Layer Perceptron (MLP), sum, or average.
 
-![GCN](/GFN/assets/gcn_web.png)
-*Graph Convolutional Network*
+<figure align="center">
+    <img src="/GFN/assets/gcn_web.png" alt>
+    <figcaption>Graph Convolutional Network</figcaption>
+</figure>
 
 #### Initialization
 Randomly assign embedding to each node or give the same vector for every node.
@@ -425,15 +431,20 @@ for epoch in range(epochs):
 ```
 
 ### Evaluation
-![Model metrics](/GFN/assets/metrics_gfn.png)
-*Model metrics*
+<figure align="center">
+    <img src="/GFN/assets/metrics_gfn.png" alt>
+    <figcaption>Model metrics</figcaption>
+</figure>
+
 We trained our model for 100 epochs and saw that the validation accuracy and training loss were excellent at the beginning. 
 However,  the instability of the validation loss was noticeable. 
 Despite this, the model performed greatly on the validation set.
 
 Here are the metrics we obtained on the test dataset.
-![Classification report](/GFN/assets/scikit-report.png)
-*Classification report*
+<figure align="center">
+    <img src="/GFN/assets/scikit-report.png" alt>
+    <figcaption>Classification report</figcaption>
+</figure>
 
 ## Code
 You can check the [Google Colab notebook](https://colab.research.google.com/drive/1HHyogoqQYtZH53v97Mf5fXzwk8I6X5w8?usp=sharing) with all the code for yourself.
@@ -441,3 +452,4 @@ You can check the [Google Colab notebook](https://colab.research.google.com/driv
 ### Finally
 So, this is how you can predict different molecular properties, such as biotherapeutic origin, using GFN! 
 If you have any questions or comments, please feel free to leave them in the comment section.
+
