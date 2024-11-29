@@ -23,10 +23,10 @@ However, such molecules can be harder to test: you have to use living organisms 
 Thus, it is important to distinguish such molecules before testing them. One of the ways to do it is using Graph Feature Network.
 
 ## What is a Graph and why can we use it for molecules?
-<p align="center">
+<figure align="center">
     <img src="/GFN/assets/graph.png" alt>
-    <div>Example of a graph</div>
-</p>
+    <figcaption>Example of a graph</figcaption>
+</figure>
 
 A graph is a structure that shows connection between set of objects. 
 
